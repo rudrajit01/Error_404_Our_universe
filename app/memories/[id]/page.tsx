@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { memories } from "@/data/memories";
 import MemoryGallery from "@/components/memories/MemoryGallery";
-export const instant = false;
 
 interface MemoryDetailsPageProps {
   params: Promise<{ id: string }>;

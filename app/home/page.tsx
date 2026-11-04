@@ -4,6 +4,7 @@ import SolarSystem from "@/components/SolarSystem";
 import SecretLoginTrigger from "@/components/SecretLoginTrigger";
 import { createClient } from "@/lib/supabase/server";
 
+
 export default async function Home() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getClaims();

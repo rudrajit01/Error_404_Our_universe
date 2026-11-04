@@ -3,7 +3,9 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import GroupChat from "@/components/GroupChat";
 
+
 export default async function GroupChatPage() {
+
   const supabase = await createClient();
 
   const { data: claims, error } = await supabase.auth.getClaims();
