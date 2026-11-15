@@ -1,6 +1,6 @@
 const friend06 = {
   id: "friend-06",
-  name: "Shrabontika Acharjee",
+  name: "Shrabontika Acharjee Tunir",
   nickname: "The Heart",
 
   profile: {
