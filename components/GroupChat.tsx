@@ -77,6 +77,24 @@ export default function GroupChat() {
       }
 
       setUserId(authData.user.id);
+      // Load all friend names
+const { data: friends, error: friendsError } = await supabase
+  .from("friend_accounts")
+  .select("friend_id, user_id");
+
+if (!active) return;
+
+if (friendsError) {
+  console.error("Friend names error:", friendsError.message);
+} else {
+  const nameMap: Record<string, string> = {};
+
+  (friends ?? []).forEach((friend) => {
+    nameMap[friend.user_id] = friend.friend_id;
+  });
+
+  setFriendNames(nameMap);
+}
 
       const { data, error: fetchError } = await supabase
         .from("group_messages")
@@ -351,9 +369,9 @@ export default function GroupChat() {
                         : "border-purple-500/20 bg-purple-900/30"
                     }`}
                   >
-                    <p className="mb-1 text-[10px] text-gray-400">
-                      {mine ? "YOU" : `MEMBER ${item.user_id.slice(0, 8)}`}
-                    </p>
+                    <p className="mb-1 text-[10px] font-semibold text-cyan-300">
+  {friendNames[item.user_id] ?? "Unknown Member"}
+</p>
 
                     {item.media_type === "image" && item.signed_url && (
                       <a href={item.signed_url} target="_blank" rel="noreferrer">
