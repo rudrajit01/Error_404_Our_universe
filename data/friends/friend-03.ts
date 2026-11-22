@@ -11,7 +11,7 @@ const friend03 = {
   },
 
   // Populated from your previous message (you left it empty here)
-  personality: [], 
+  personality: ["Ambivert","Curious","Emotional but strong","Family-oriented","Quietly ambitious"], 
   
   hobbies: [
     "Listening to music",
@@ -22,13 +22,11 @@ const friend03 = {
   ],
   
   skills: [
-    "Biotechnology knowledge",
-    "Adaptability",
-    "Finding beauty in simple things"
+    "Adaptability","Finding beauty in simple things"," A curious soul","a beginner at everything","a master of nothing"
   ],
 
   favourites: {
-    food: ["Chicken,", "Kacchi,", "Fulkopi,", "Soyabean,", "Sobji polao,", "Panir"],
+    food: ["A little bit of everything, but especially Chicken & Kacchi"],
     music: "Bengali_songs_&_Rabindra_Sangeet",
     movie: "Sita_Ramam",
     color: "Black",
