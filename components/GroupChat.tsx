@@ -30,6 +30,7 @@ export default function GroupChat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [text, setText] = useState("");
   const [userId, setUserId] = useState("");
+  const [friendNames, setFriendNames] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
   const [sending, setSending] = useState(false);
   const [recording, setRecording] = useState(false);
